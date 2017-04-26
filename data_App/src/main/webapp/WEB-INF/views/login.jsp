@@ -6,7 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>From JSP</title>
 </head>
+<%
+System.out.println("Success!");
+System.out.println(request.getParameter("name"));
+java.util.Date date = new java.util.Date();
+%>
+<div>Current date is <%=date%> </div>
 <body>
-First JSP for ${name};
+First JSP for ${name}
 </body>
 </html>
