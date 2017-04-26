@@ -5,15 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>From JSP</title>
+<title>Welcome</title>
 </head>
-<%
-System.out.println("Success!");
-System.out.println(request.getParameter("name"));
-Date date = new Date();
-%>
-<div>Current date is <%=date%> </div>
 <body>
-First JSP for ${name}
+Welcome ${name} + ${password}
 </body>
 </html>
+<!-- valid user -> welcome -->
+<!-- invalid user -> login --> 

@@ -1,4 +1,3 @@
-<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,13 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>From JSP</title>
 </head>
-<%
-System.out.println("Success!");
-System.out.println(request.getParameter("name"));
-Date date = new Date();
-%>
-<div>Current date is <%=date%> </div>
+<div></div>
 <body>
-First JSP for ${name}
+<form action="/login.do" method="post">
+Enter your name <input type="text" name="name"/>
+Enter password <input type="password" name="password"/><input type="submit" value="Login">
+
+</form>
 </body>
 </html>
