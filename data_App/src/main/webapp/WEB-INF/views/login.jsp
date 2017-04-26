@@ -9,6 +9,7 @@
 <div></div>
 <body>
 <form action="/login.do" method="post">
+<p><font color = "red">${errorMsg}</font></p>
 Enter your name <input type="text" name="name"/>
 Enter password <input type="password" name="password"/><input type="submit" value="Login">
 
