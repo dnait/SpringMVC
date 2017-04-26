@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * Web Server responds with Http Response
  */
 
-//Java Platform, Enterprise Edition (Java EE) JEE6
+//Java Platform, Enterprise Edition (Java EE) JEE7
 
 //Servlet is a Java programming language class 
 //used to extend the capabilities of servers 
@@ -37,10 +37,10 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
 		out.println("<head>");
-		out.println("<title>Yahoo!!!!!!!!</title>");
+		out.println("<title>Yep!!!!!!!!</title>");
 		out.println("</head>");
 		out.println("<body>");
-		out.println("My First Servlet");
+		out.println("Servlet is working");
 		out.println("</body>");
 		out.println("</html>");
 
