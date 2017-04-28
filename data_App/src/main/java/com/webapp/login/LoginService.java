@@ -1,4 +1,4 @@
-package com.webapp.jee;
+package com.webapp.login;
 
 public class LoginService {
 	public boolean validateUser(String user, String password) {
