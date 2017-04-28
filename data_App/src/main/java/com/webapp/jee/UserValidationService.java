@@ -1,4 +1,4 @@
-package webapp;
+package com.webapp.jee;
 
 public class UserValidationService {
 	public boolean isUserValid(String user, String pwd) {
