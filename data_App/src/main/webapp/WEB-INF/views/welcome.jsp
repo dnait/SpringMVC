@@ -9,7 +9,7 @@
 </head>
 <body>
 Welcome ${name} <br/>
-Now we can  <a href="/list-todos?name=${name}"> manage your todo list</a>
+Now we can  <a href="/list-todos"> manage your todo list</a>
 </body>
 </html>
 <!-- valid user -> welcome -->
