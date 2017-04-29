@@ -8,6 +8,7 @@
 <title>Welcome</title>
 </head>
 <body>
+Hi, ${name} <br/>
 Your todo list is 
 ${todos}
 </body>
