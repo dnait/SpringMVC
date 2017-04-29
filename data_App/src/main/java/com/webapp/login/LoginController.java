@@ -1,5 +1,6 @@
 package com.webapp.login;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,11 @@ import com.webapp.login.LoginService;
 @Controller
 public class LoginController {
 	
-	LoginService service = new LoginService();
+	//Set the login service from the framework with dependency injection
+	//Set the login service -Auto Wiring
+	//LoginService service = new LoginService();
+	@Autowired
+	LoginService service;
 	//map to /login
 	@RequestMapping(value = "/login", method=RequestMethod.GET)	
 	public String showLoginPage() {
