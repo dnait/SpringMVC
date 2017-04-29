@@ -8,9 +8,8 @@
 </head>
 <body>
 Hi, ${name} <br/>
-Your todo list is <br/>
-<div>
-		<table>
+<div class="container">
+		<table class="table table-striped">
 			<caption>Your Todos are</caption>
 
 			<thead>
@@ -30,13 +29,13 @@ Your todo list is <br/>
 					</tr>
 				</c:forEach>
 			</tbody>
-		</table>
+		</table>		
+		<div>
+			<a class="btn btn-success"  href="/add-todo">Add</a>
+		</div>
 	</div>
-
-
-<a class="button" href="/add-todo">Add</a>
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-	    <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
 <!-- valid user -> welcome -->
