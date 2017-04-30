@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.webapp.login.LoginService;
 
 @Controller
 @SessionAttributes("name")
@@ -37,18 +36,20 @@ public class TodoController {
 	
 	//map to /login
 	@RequestMapping(value = "/list-todos", method=RequestMethod.GET)	
-	public String listTodos(String name, ModelMap model) {
-		//or in the todolist, the name will not show up 
-		String user = (String)model.get("name");
-		model.addAttribute("todos", service.retrieveTodos(user));
+	public String listTodos(ModelMap model) {
+		model.addAttribute("todos", service.retrieveTodos(retrieveLoggedinUserName()));
 		return "list-todos" ;
+	}
+
+	private String retrieveLoggedinUserName() {
+		return "cathy";
 	}
 	
 	//map to /add-todo
 	@RequestMapping(value = "/add-todo", method=RequestMethod.GET)	
 	public String showTodoPage(ModelMap model) {
 		//or in the todolist, the name will not show up 
-		model.addAttribute("todo", new Todo(0, "cathy","", new Date(), false));
+		model.addAttribute("todo", new Todo(0, retrieveLoggedinUserName(),"", new Date(), false));
 		return "todo" ;
 	}
 	
@@ -57,7 +58,7 @@ public class TodoController {
 		if (result.hasErrors()) {
 			return "todo";
 		}
-		service.addTodo("cathy", todo.getDesc(), new Date(), false);
+		service.addTodo(retrieveLoggedinUserName(), todo.getDesc(), new Date(), false);
 		model.clear();// to prevent request parameter "name" or "password" to be passed
 		return "redirect:/list-todos";
 	}
