@@ -1,15 +1,8 @@
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Welcome</title>
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
-    rel="stylesheet">
-</head>
-<body>
+<%@ include file="common/header.jspf"%> 
+<%@ include file="common/navigation.jspf"%> 
 	<div class="container">
 		Add a Todo
-		<form:form action="/add-todo" method="POST" commandName="todo">
+		<form:form method="POST" commandName="todo">
 			<fieldset class="form-group">
 				<form:label path="desc">Description</form:label>
 				<form:input path="desc" type="text" class="form-control" required="required"/>	
@@ -23,9 +16,4 @@
 			<button type="submit" class="btn btn-success">Submit</button>
 		</form:form>
 	</div>
-	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</body>
-</html>
-<!-- valid user -> welcome -->
-<!-- invalid user -> login --> 
+<%@ include file="common/footer.jspf"%>
