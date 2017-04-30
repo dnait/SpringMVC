@@ -15,7 +15,7 @@
 				<form:input path="desc" type="text" class="form-control" required="required"/>	
 				<form:errors path="desc" cssClass="text-warning"/>			
 			</fieldset>
-			<button type="submit" class="btn btn-success">Add</button>
+			<button type="submit" class="btn btn-success">Submit</button>
 		</form:form>
 	</div>
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>

@@ -58,4 +58,19 @@ public class TodoController {
 		return "redirect:/list-todos";
 	}
 	
+	//Update_GET
+	@RequestMapping(value = "/update-todo", method = RequestMethod.GET)
+	public String updateTodo(ModelMap model, @RequestParam int id) {
+		Todo todo = service.retrieveTodo(id);
+		model.addAttribute("todo", todo);
+		return "todo";
+	}
+	
+	//Update_POST
+	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
+	public String updateTodo() {
+		return "todo";
+	}
+	
+	
 }
