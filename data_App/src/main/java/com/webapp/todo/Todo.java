@@ -2,12 +2,20 @@ package com.webapp.todo;
 
 import java.util.Date;
 
+import javax.validation.constraints.Size;
+
 public class Todo {
 		private int id;
 		private String user;
+		
+		@Size(min = 6, message = "Enter at least 6 characters")
 		private String desc;
 		private Date targetDate;
 		private boolean isDone;
+		
+		public Todo(){
+			super();
+		}
 		
 
 		
