@@ -1,0 +1,8 @@
+java errors:
+Application cannot be resolved as a type:
+Helloworld cannot be resolved as a type:
+
+try
+mvn eclipse:clean
+mvn clean install
+mvn eclipse:eclipse
