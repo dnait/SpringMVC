@@ -1,8 +1,12 @@
 java errors:
 Application cannot be resolved as a type:
 Helloworld cannot be resolved as a type:
+But classes are there
 
 try
 mvn eclipse:clean
-mvn clean install
+mvn clean install  (compilation error, then found we need to update test code to point to com.xxx.zzz.yyy, aftering updating, errors gone)
 mvn eclipse:eclipse
+
+
+2. 
