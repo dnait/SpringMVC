@@ -9,4 +9,6 @@ mvn clean install  (compilation error, then found we need to update test code to
 mvn eclipse:eclipse
 
 
-2. 
+2. pom.xml
+Cannot find the parent groupId/artifactid
+updated with settings.xml under .m2
